@@ -1,4 +1,5 @@
-@import "variaveis.less";
+@import "mapas.less";
+
 @breakpointMobile: ~"(max-width: 767px)";
 @breakpointTablet: ~"(min-width: 768px) and (max-width: 1023px)";
 
@@ -13,8 +14,8 @@
     font-family: 'Roboto', sans-serif;
 }
 body{
-    background-color: @corDeFundo;
-    color: @corDosTextos;
+    background-color: #colors[backgroundColor];
+    color: #colors[TextColorColor];
 }
 .container{
     max-width: 960px;
@@ -54,6 +55,25 @@ header{
     &-description{
         font-size: 14px;
         opacity: .7;
+    }
+}
+
+.social-links{
+    display: flex;
+    justify-content: space-between;
+    max-width: 240px;
+    width: 100%;
+    margin: 0 auto;
+
+    li{
+        list-style: none;
+
+        img{
+            transition: all ease .3s;
+            &:hover{
+                transform: scale(1.1);
+            }
+        }
     }
 
 
